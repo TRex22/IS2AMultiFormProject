@@ -32,21 +32,21 @@
             this.makeABookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.combBoxShows = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownNumPeople = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerShow = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.grpBoxDrinksService = new System.Windows.Forms.GroupBox();
+            this.rdoBtnSoftDrinks = new System.Windows.Forms.RadioButton();
+            this.rdoBtnAlcohol = new System.Windows.Forms.RadioButton();
             this.lblTitle = new System.Windows.Forms.Label();
             this.chkBoxLimoService = new System.Windows.Forms.CheckBox();
-            this.rdoBtnAlcohol = new System.Windows.Forms.RadioButton();
-            this.rdoBtnSoftDrinks = new System.Windows.Forms.RadioButton();
             this.lblOutDetails = new System.Windows.Forms.Label();
             this.lblOutCost = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumPeople)).BeginInit();
             this.grpBoxDrinksService.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,12 +67,14 @@
             this.makeABookingToolStripMenuItem.Name = "makeABookingToolStripMenuItem";
             this.makeABookingToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.makeABookingToolStripMenuItem.Text = "Make a Booking";
+            this.makeABookingToolStripMenuItem.Click += new System.EventHandler(this.makeABookingToolStripMenuItem_Click);
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
             this.clearToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // returnToolStripMenuItem
             // 
@@ -81,19 +83,13 @@
             this.returnToolStripMenuItem.Text = "Return";
             this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
             // 
-            // comboBox1
+            // combBoxShows
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "House of Cards",
-            "Lord of the Rings Trilogy",
-            "The Big Lebowski",
-            "Unbreakable",
-            "Guardians of the Galaxy"});
-            this.comboBox1.Location = new System.Drawing.Point(193, 134);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 1;
+            this.combBoxShows.FormattingEnabled = true;
+            this.combBoxShows.Location = new System.Drawing.Point(193, 134);
+            this.combBoxShows.Name = "combBoxShows";
+            this.combBoxShows.Size = new System.Drawing.Size(200, 21);
+            this.combBoxShows.TabIndex = 1;
             // 
             // label1
             // 
@@ -104,12 +100,12 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Shows";
             // 
-            // numericUpDown1
+            // numericUpDownNumPeople
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(193, 183);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(200, 20);
-            this.numericUpDown1.TabIndex = 3;
+            this.numericUpDownNumPeople.Location = new System.Drawing.Point(193, 183);
+            this.numericUpDownNumPeople.Name = "numericUpDownNumPeople";
+            this.numericUpDownNumPeople.Size = new System.Drawing.Size(200, 20);
+            this.numericUpDownNumPeople.TabIndex = 3;
             // 
             // label2
             // 
@@ -120,12 +116,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Number of People";
             // 
-            // dateTimePicker1
+            // dateTimePickerShow
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(193, 235);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dateTimePickerShow.Location = new System.Drawing.Point(193, 235);
+            this.dateTimePickerShow.Name = "dateTimePickerShow";
+            this.dateTimePickerShow.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerShow.TabIndex = 5;
             // 
             // label3
             // 
@@ -147,6 +143,28 @@
             this.grpBoxDrinksService.TabStop = false;
             this.grpBoxDrinksService.Text = "Drinks service";
             // 
+            // rdoBtnSoftDrinks
+            // 
+            this.rdoBtnSoftDrinks.AutoSize = true;
+            this.rdoBtnSoftDrinks.Location = new System.Drawing.Point(7, 44);
+            this.rdoBtnSoftDrinks.Name = "rdoBtnSoftDrinks";
+            this.rdoBtnSoftDrinks.Size = new System.Drawing.Size(75, 17);
+            this.rdoBtnSoftDrinks.TabIndex = 1;
+            this.rdoBtnSoftDrinks.TabStop = true;
+            this.rdoBtnSoftDrinks.Text = "Soft drinks";
+            this.rdoBtnSoftDrinks.UseVisualStyleBackColor = true;
+            // 
+            // rdoBtnAlcohol
+            // 
+            this.rdoBtnAlcohol.AutoSize = true;
+            this.rdoBtnAlcohol.Location = new System.Drawing.Point(7, 20);
+            this.rdoBtnAlcohol.Name = "rdoBtnAlcohol";
+            this.rdoBtnAlcohol.Size = new System.Drawing.Size(150, 17);
+            this.rdoBtnAlcohol.TabIndex = 0;
+            this.rdoBtnAlcohol.TabStop = true;
+            this.rdoBtnAlcohol.Text = "Wine, malt, and soft drinks";
+            this.rdoBtnAlcohol.UseVisualStyleBackColor = true;
+            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -166,28 +184,6 @@
             this.chkBoxLimoService.TabIndex = 9;
             this.chkBoxLimoService.Text = "Limo service required?";
             this.chkBoxLimoService.UseVisualStyleBackColor = true;
-            // 
-            // rdoBtnAlcohol
-            // 
-            this.rdoBtnAlcohol.AutoSize = true;
-            this.rdoBtnAlcohol.Location = new System.Drawing.Point(7, 20);
-            this.rdoBtnAlcohol.Name = "rdoBtnAlcohol";
-            this.rdoBtnAlcohol.Size = new System.Drawing.Size(150, 17);
-            this.rdoBtnAlcohol.TabIndex = 0;
-            this.rdoBtnAlcohol.TabStop = true;
-            this.rdoBtnAlcohol.Text = "Wine, malt, and soft drinks";
-            this.rdoBtnAlcohol.UseVisualStyleBackColor = true;
-            // 
-            // rdoBtnSoftDrinks
-            // 
-            this.rdoBtnSoftDrinks.AutoSize = true;
-            this.rdoBtnSoftDrinks.Location = new System.Drawing.Point(7, 44);
-            this.rdoBtnSoftDrinks.Name = "rdoBtnSoftDrinks";
-            this.rdoBtnSoftDrinks.Size = new System.Drawing.Size(75, 17);
-            this.rdoBtnSoftDrinks.TabIndex = 1;
-            this.rdoBtnSoftDrinks.TabStop = true;
-            this.rdoBtnSoftDrinks.Text = "Soft drinks";
-            this.rdoBtnSoftDrinks.UseVisualStyleBackColor = true;
             // 
             // lblOutDetails
             // 
@@ -218,11 +214,11 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.grpBoxDrinksService);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerShow);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericUpDownNumPeople);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.combBoxShows);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "BookingFrm";
@@ -230,7 +226,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumPeople)).EndInit();
             this.grpBoxDrinksService.ResumeLayout(false);
             this.grpBoxDrinksService.PerformLayout();
             this.ResumeLayout(false);
@@ -244,11 +240,11 @@
         private System.Windows.Forms.ToolStripMenuItem makeABookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox combBoxShows;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownNumPeople;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerShow;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox grpBoxDrinksService;
         private System.Windows.Forms.Label lblTitle;

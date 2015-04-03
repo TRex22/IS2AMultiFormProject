@@ -6,9 +6,9 @@ namespace MultipleFormsClassLibrary
 {
     public class ChangeForm
     {
-        public 
+        /*public 
         {
             
-        }
+        }*/
     }
 }
