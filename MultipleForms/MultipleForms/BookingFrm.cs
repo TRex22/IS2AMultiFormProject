@@ -14,7 +14,7 @@ namespace MultipleForms
         public BookingFrm()
         {
             //TODO fix this
-            combBoxShows.Items.AddRange(BookingClass.Shows);
+            combBoxShows.Items.AddRange(BookingDataHandlerClass.Shows);
             InitializeComponent();
         }
 
