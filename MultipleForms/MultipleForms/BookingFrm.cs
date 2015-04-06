@@ -1,35 +1,38 @@
 ﻿using System;
 using System.Windows.Forms;
+using MultipleForms.Properties;
 using MultipleFormsClassLibrary;
 
 namespace MultipleForms
 {
     public partial class BookingFrm : Form
     {
-        readonly BookingDataHandlerClass _bookingDataHandlerClass = new BookingDataHandlerClass();
-        public BookingFrm(BookingDataHandlerClass bookingDataHandlerClass)
+        private readonly Login _loginForm = new Login();
+        private readonly BookingDataHandlerClass _bookingDataHandlerClass = new BookingDataHandlerClass();
+
+        public BookingFrm(Login loginForm, BookingDataHandlerClass bookingDataHandlerClass)
         {
+            _loginForm = loginForm;
             _bookingDataHandlerClass = bookingDataHandlerClass;
 
             //if no shows then go back to login because admin must add data
             if (_bookingDataHandlerClass.HasContent == true)
             {
-                var showNames = _bookingDataHandlerClass.GetShowNames();
-                combBoxShows.Items.AddRange(showNames);
-                InitializeComponent();
+               InitializeComponent();
+               var showNames = _bookingDataHandlerClass.GetShowNames();
+               combBoxShows.Items.AddRange(showNames);
             }
             else
             {
                 //return to login
+                MessageBox.Show(Resources.BookingFrm_BookingFrm_Unfortunately_no_shows_have_been_added_to_the_program__The_admin_must_login_to_add_shows_);
+                LogOut();
             }
         }
 
         private void returnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Login LoginInstance = new Login();
-            this.Visible = false; //TODO JMC use a proper destructor so that you don't eventually run out of mem from a million windows
-            LoginInstance.Show();
-            
+            LogOut();
         }
 
         private void makeABookingToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,6 +55,12 @@ namespace MultipleForms
 
             lblOutDetails.Text = "";
             lblOutCost.Text = "";
+        }
+
+        private void LogOut()
+        {
+            _loginForm.Show();
+            this.Close();
         }
     }
 }

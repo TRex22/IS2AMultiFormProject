@@ -19,7 +19,7 @@ namespace MultipleFormsClassLibrary
         public object[] GetShowNames()
         {
             var showNames = new object[_shows.Length];
-            for (var i = _shows.Length; i > 0; i--)
+            for (var i = 0; i < _shows.Length; i++)
             {
                 showNames[i] = _shows[i].ShowName;
             }
@@ -34,10 +34,10 @@ namespace MultipleFormsClassLibrary
                 _shows = new[]{show};
             else
             {
-                _shows = new Show[tmpShows.Length + 1];
-                for (var i = tmpShows.Length; i > 0; i--)
+                _shows = new Show[tmpShows.Length];
+                for (var i = tmpShows.Length-1; i > 0; i--)
                     _shows[i] = tmpShows[i];
-                _shows[tmpShows.Length + 1] = show;
+                _shows[tmpShows.Length - 1] = show;
             }
             HasContent = true;
         }

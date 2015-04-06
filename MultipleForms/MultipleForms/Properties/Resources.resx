@@ -120,4 +120,7 @@
   <data name="AdminFrm_addToolStripMenuItem_Click___0___is_outside_the_range_of_a_Double_" xml:space="preserve">
     <value>'{0}' is outside the range of a Double.</value>
   </data>
+  <data name="BookingFrm_BookingFrm_Unfortunately_no_shows_have_been_added_to_the_program__The_admin_must_login_to_add_shows_" xml:space="preserve">
+    <value>Unfortunately no shows have been added to the program. The admin must login to add shows.</value>
+  </data>
 </root>

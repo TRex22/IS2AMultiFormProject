@@ -39,6 +39,7 @@
     <Compile Include="BookingClass.cs" />
     <Compile Include="BookingDataHandlerClass.cs" />
     <Compile Include="ChangeForm.cs" />
+    <Compile Include="LoginClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Show.cs" />
   </ItemGroup>

@@ -39,7 +39,7 @@ namespace MultipleFormsClassLibrary
             outputs[0] = String.Format("You are booked to see {0} for {1} person/people on {2}. {3}", shows[intShowIndex].ShowName, intNumPeople, bookedDay, limoServiceStr);
 
             var dblCalculatedCost = CalculateCost(shows[intShowIndex].ShowCost, blnLimoService, blnWineMaltSoftDrinks, blnSoftDrinksOnly);
-            outputs[1] = string.Format("The cost will be {0} including VAT", dblCalculatedCost);
+            outputs[1] = string.Format("The cost will be R{0:0.00} including VAT", dblCalculatedCost);
 
             return outputs;
         }

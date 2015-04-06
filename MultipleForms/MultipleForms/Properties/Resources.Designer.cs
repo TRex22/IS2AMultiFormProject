@@ -77,5 +77,15 @@ namespace MultipleForms.Properties {
                 return ResourceManager.GetString("AdminFrm_addToolStripMenuItem_Click_Unable_to_convert___0___to_a_Double_", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unfortunately no shows have been added to the program. The admin must login to add shows..
+        /// </summary>
+        internal static string BookingFrm_BookingFrm_Unfortunately_no_shows_have_been_added_to_the_program__The_admin_must_login_to_add_shows_ {
+            get {
+                return ResourceManager.GetString("BookingFrm_BookingFrm_Unfortunately_no_shows_have_been_added_to_the_program__The_" +
+                        "admin_must_login_to_add_shows_", resourceCulture);
+            }
+        }
     }
 }

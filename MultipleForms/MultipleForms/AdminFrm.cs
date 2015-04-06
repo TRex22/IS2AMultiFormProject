@@ -7,26 +7,26 @@ namespace MultipleForms
 {
     public partial class AdminFrm : Form
     {
-        BookingDataHandlerClass _bookingDataHandlerClass = new BookingDataHandlerClass();
-        public AdminFrm(BookingDataHandlerClass bookingDataHandlerClass)
+        private readonly Login _loginForm = new Login();
+        private readonly BookingDataHandlerClass _bookingDataHandlerClass = new BookingDataHandlerClass();
+        public AdminFrm(Login loginForm, BookingDataHandlerClass bookingDataHandlerClass)
         {
+            _loginForm = loginForm;
             _bookingDataHandlerClass = bookingDataHandlerClass;
             InitializeComponent();
         }
 
         private void returnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var LoginInstance = new Login();
-            Visible = false;
-                //TODO JMC use a proper destructor so that you don't eventually run out of mem from a million windows
-            LoginInstance.Show();
+            //a troublesome hack to get this to work before the deadline
+            LogOut();
         }
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                double cost = Convert.ToDouble(txtBxShowCost.Text);
+                var cost = Convert.ToDouble(txtBxShowCost.Text);
                 var show = new Show(txtBxShowName.Text, cost);
                 _bookingDataHandlerClass.AddShow(show);
                 MessageBox.Show(String.Format("Added {0}", show.ShowName));
@@ -39,6 +39,15 @@ namespace MultipleForms
             {
                 Console.WriteLine(Resources.AdminFrm_addToolStripMenuItem_Click___0___is_outside_the_range_of_a_Double_, txtBxShowCost.Text);
             }
+
+            txtBxShowName.Text = "";
+            txtBxShowCost.Text = "";
+        }
+
+        private void LogOut()
+        {
+            _loginForm.Show();
+            this.Close();
         }
     }
 }

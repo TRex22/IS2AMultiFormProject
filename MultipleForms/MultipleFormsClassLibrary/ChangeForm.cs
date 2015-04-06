@@ -6,7 +6,7 @@ namespace MultipleFormsClassLibrary
 {
     public class ChangeForm
     {
-        /*public 
+        /*public ChangeForm(Login loginForm)
         {
             
         }*/
