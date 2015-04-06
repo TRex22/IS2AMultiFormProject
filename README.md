@@ -43,6 +43,10 @@ I did run out of time, but this method of working did succeed in a few ways.
 I got to complete all the main tasks for this little university project.
 ![Image of GitHub Issues](http://jasonchalom.com/IS2AMultiFormProject/SomeData/Issues.PNG)
 
+###AppVeyor
+AppVeyor as a CI for .net projects is so much better than TravisCI.
+TravisCI works well for linux stuff but the setup for .net is quite time consuming and gives you a lot of grief.
+AppVeyor took 2 minutes to setup. Point it to the sln file and MSBUILD takes over and uses the correct build setings.
 
 FIN.
 ----
