@@ -1,0 +1,12 @@
+C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleForms\obj\Debug\MultipleForms.csprojResolveAssemblyReference.cache
+C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleForms\obj\Debug\MultipleForms.AdminFrm.resources
+C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleForms\obj\Debug\MultipleForms.BookingFrm.resources
+C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleForms\obj\Debug\MultipleForms.Login.resources
+C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleForms\obj\Debug\MultipleForms.Properties.Resources.resources
+C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleForms\obj\Debug\MultipleForms.csproj.GenerateResource.Cache
+C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleForms\bin\Debug\MultipleForms.exe
+C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleForms\bin\Debug\MultipleForms.pdb
+C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleForms\bin\Debug\MultipleFormsClassLibrary.dll
+C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleForms\bin\Debug\MultipleFormsClassLibrary.pdb
+C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleForms\obj\Debug\MultipleForms.exe
+C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleForms\obj\Debug\MultipleForms.pdb
