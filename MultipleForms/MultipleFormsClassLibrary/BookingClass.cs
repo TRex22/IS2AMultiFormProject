@@ -14,9 +14,9 @@ namespace MultipleFormsClassLibrary
         private const double SoftDrinksCost = 50.00;
         private const double VAT = 0.10;
 
-        public static string[] CalculateBookingsMessages(int intShowIndex, int intNumPeople, DateTime selectedDate, bool blnLimoService, bool blnWineMaltSoftDrinks, bool blnSoftDrinksOnly)
+        public static string[] CalculateBookingsMessages(BookingDataHandlerClass bookingDataHandlerClass, int intShowIndex, int intNumPeople, DateTime selectedDate, bool blnLimoService, bool blnWineMaltSoftDrinks, bool blnSoftDrinksOnly)
         {
-            //if no shows then go back to login because admin must add data
+            //if no shows then go back to login because admin must add data - will be in form that makes sense
 
             var outputs = new[] {"", ""};
 
@@ -35,7 +35,7 @@ namespace MultipleFormsClassLibrary
                 }
             }
             //The string.Format here works like a string builder. It is better than just using ""+""+int 
-            var shows = BookingDataHandlerClass.GetShows();
+            var shows = bookingDataHandlerClass.GetShows();
             outputs[0] = String.Format("You are booked to see {0} for {1} person/people on {2}. {3}", shows[intShowIndex].ShowName, intNumPeople, bookedDay, limoServiceStr);
 
             var dblCalculatedCost = CalculateCost(shows[intShowIndex].ShowCost, blnLimoService, blnWineMaltSoftDrinks, blnSoftDrinksOnly);

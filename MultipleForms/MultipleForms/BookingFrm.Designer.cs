@@ -79,8 +79,8 @@
             // returnToolStripMenuItem
             // 
             this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-            this.returnToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.returnToolStripMenuItem.Text = "Return";
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.returnToolStripMenuItem.Text = "Log Out";
             this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
             // 
             // combBoxShows
@@ -169,7 +169,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Symbol", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(186, 45);
+            this.lblTitle.Location = new System.Drawing.Point(237, 50);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(313, 37);
             this.lblTitle.TabIndex = 8;

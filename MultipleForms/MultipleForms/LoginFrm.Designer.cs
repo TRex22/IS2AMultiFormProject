@@ -36,6 +36,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,14 +46,14 @@
             this.userCmboBox.Items.AddRange(new object[] {
             "Admin",
             "Client"});
-            this.userCmboBox.Location = new System.Drawing.Point(141, 103);
+            this.userCmboBox.Location = new System.Drawing.Point(141, 145);
             this.userCmboBox.Name = "userCmboBox";
             this.userCmboBox.Size = new System.Drawing.Size(270, 21);
             this.userCmboBox.TabIndex = 0;
             // 
             // passwordTxtBox
             // 
-            this.passwordTxtBox.Location = new System.Drawing.Point(141, 155);
+            this.passwordTxtBox.Location = new System.Drawing.Point(141, 197);
             this.passwordTxtBox.Name = "passwordTxtBox";
             this.passwordTxtBox.PasswordChar = '*';
             this.passwordTxtBox.Size = new System.Drawing.Size(270, 20);
@@ -94,7 +95,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(141, 136);
+            this.label1.Location = new System.Drawing.Point(141, 178);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 3;
@@ -103,17 +104,28 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(141, 84);
+            this.label2.Location = new System.Drawing.Point(141, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "User:";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Symbol", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(119, 60);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(313, 37);
+            this.lblTitle.TabIndex = 9;
+            this.lblTitle.Text = "ISIIA BLOCK 1 PROJECT";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 302);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.passwordTxtBox);
@@ -140,6 +152,7 @@
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
 

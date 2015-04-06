@@ -114,4 +114,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdminFrm_addToolStripMenuItem_Click_Unable_to_convert___0___to_a_Double_" xml:space="preserve">
+    <value>Unable to convert '{0}' to a Double.</value>
+  </data>
+  <data name="AdminFrm_addToolStripMenuItem_Click___0___is_outside_the_range_of_a_Double_" xml:space="preserve">
+    <value>'{0}' is outside the range of a Double.</value>
+  </data>
 </root>

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using MultipleFormsClassLibrary;
 
@@ -11,11 +6,22 @@ namespace MultipleForms
 {
     public partial class BookingFrm : Form
     {
-        public BookingFrm()
+        readonly BookingDataHandlerClass _bookingDataHandlerClass = new BookingDataHandlerClass();
+        public BookingFrm(BookingDataHandlerClass bookingDataHandlerClass)
         {
-            //TODO fix this
-            combBoxShows.Items.AddRange(BookingDataHandlerClass.Shows);
-            InitializeComponent();
+            _bookingDataHandlerClass = bookingDataHandlerClass;
+
+            //if no shows then go back to login because admin must add data
+            if (_bookingDataHandlerClass.HasContent == true)
+            {
+                var showNames = _bookingDataHandlerClass.GetShowNames();
+                combBoxShows.Items.AddRange(showNames);
+                InitializeComponent();
+            }
+            else
+            {
+                //return to login
+            }
         }
 
         private void returnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -28,7 +34,7 @@ namespace MultipleForms
 
         private void makeABookingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var outputs = BookingClass.CalculateBookingsMessages(combBoxShows.SelectedIndex, (int)numericUpDownNumPeople.Value, dateTimePickerShow.Value,
+            var outputs = BookingClass.CalculateBookingsMessages(_bookingDataHandlerClass, combBoxShows.SelectedIndex, (int)numericUpDownNumPeople.Value, dateTimePickerShow.Value,
                 chkBoxLimoService.Checked, rdoBtnAlcohol.Checked, rdoBtnSoftDrinks.Checked);
             lblOutDetails.Text = outputs[0];
             lblOutCost.Text = outputs[1];

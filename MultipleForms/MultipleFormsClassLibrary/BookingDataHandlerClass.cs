@@ -1,35 +1,45 @@
-﻿namespace MultipleFormsClassLibrary
+﻿using System;
+
+namespace MultipleFormsClassLibrary
 {
+    //THIS IS ABSOLUTELY NASTY WAY OF VARIABLE THINGS. NOT A SEMAPHORE OR ANYTHING REALLY PLEASE NEVER DO THIS!!!!
+    //IT'S JUST FOR MY SMALL COURSE PROJECT
     public class BookingDataHandlerClass
     {
         //windows forms uses objects in comboboxes
 
-        private static Show[] _shows =
-        {
-        };
+        private Show[] _shows = {};
+        public bool HasContent = false;
 
-        public void SetShows(Show[] shows)
-        {
-            _shows = shows;
-        }
-
-        public static Show[] GetShows()
+        public Show[] GetShows()
         {
             return _shows;
         }
-    }
 
-    //don't do this but hey its only a few lines and the definition of a show can sit here since it will only be here.
-    //All magic ie evil happens in this file
-    public class Show
-    {
-        public Show(string showName, double showCost)
+        public object[] GetShowNames()
         {
-            ShowName = showName;
-            ShowCost = showCost;
+            var showNames = new object[_shows.Length];
+            for (var i = _shows.Length; i > 0; i--)
+            {
+                showNames[i] = _shows[i].ShowName;
+            }
+            return showNames;
         }
 
-        public string ShowName { get; set; }
-        public double ShowCost { get; set; }
+        //super hack to get this working
+        public void AddShow(Show show)
+        {
+            var tmpShows = _shows;
+            if (tmpShows.Length <= 0)
+                _shows = new[]{show};
+            else
+            {
+                _shows = new Show[tmpShows.Length + 1];
+                for (var i = tmpShows.Length; i > 0; i--)
+                    _shows[i] = tmpShows[i];
+                _shows[tmpShows.Length + 1] = show;
+            }
+            HasContent = true;
+        }
     }
 }
