@@ -1,5 +1,0 @@
-C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleFormsClassLibrary\obj\Debug\MultipleFormsClassLibrary.csprojResolveAssemblyReference.cache
-C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleFormsClassLibrary\bin\Debug\MultipleFormsClassLibrary.dll
-C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleFormsClassLibrary\bin\Debug\MultipleFormsClassLibrary.pdb
-C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleFormsClassLibrary\obj\Debug\MultipleFormsClassLibrary.dll
-C:\Users\TRex22\Desktop\Stuff\code\IS2AMultiFormProject\MultipleForms\MultipleFormsClassLibrary\obj\Debug\MultipleFormsClassLibrary.pdb
