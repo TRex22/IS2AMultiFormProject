@@ -20,6 +20,29 @@ What I am doing with this project is using a few project management tools to sim
 I am using GitHub as my main web app but also http://waffle.io as a work dashboard to track my progress and spec out the project boundaries and deadlines.
 I have done these things before but not for something with a definite end and no other team members. Here I want to primarily optimise my workflow and analyse in real-time what is going on.
 
+##Conclusion / Post-mortem
+So the project brief is located in the repo - you can read it there.
+This method of working is not new for me. In the past I have used whiteboards, paper and Google Keep.
+The method succeeds in a few ways. It allows me to break-up complex problems into a set of small steps.
+I can also track and monitor what I am doing.
+It also makes a project spec much easier to deal with and quicker to do.
+
+There are problems I am hoping to solve with a proper software solution.
+The major problem is keeping in the timeframe decided on.
+Also scoping correctly at the beginning rather than adding snippets (GitHub issues) during the project implementation phase.
+Doing this makes the project naturally grow and leads to feature creep.
+
+###Waffle.IO
+![Image of Waffle.io](http://jasonchalom.com/IS2AMultiFormProject/SomeData/WaffleScreenshot.PNG)
+Waffle IO is not really the correct tool for the job.
+That is what I learned from this. The biggest struggle was keeping in the correct time frame which I did not do.
+![Image of GitHub Milestones](http://jasonchalom.com/IS2AMultiFormProject/SomeData/Milestones.PNG)
+
+I did run out of time, but this method of working did succeed in a few ways.
+
+I got to complete all the main tasks for this little university project.
+![Image of GitHub Issues](http://jasonchalom.com/IS2AMultiFormProject/SomeData/Issues.PNG)
+
 
 FIN.
 ----
